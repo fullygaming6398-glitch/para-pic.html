@@ -350,8 +350,8 @@ const music = document.getElementById("bgMusic");
 document.querySelector("#lockScreen button").addEventListener("click", () => {
   setTimeout(() => {
     if (document.getElementById("lockScreen").classList.contains("hidden")) {
-      music.currentTime = 35;
-      music.volume = 0.35;
+      music.currentTime = 0;
+      music.volume = 0:00;
       music.play().catch(() => {});
     }
   }, 700);
