@@ -276,7 +276,7 @@
   <h2>Happy Anniversary Jaan <span class="heartbeat">💖</span></h2>
   <p>Happy anniversary jaan 🤭 finally hume 2 saal pure ho gaye 🫠🫶🏻 esa lag raha hai 2 saal nhi 100 saal tumhare sath jia hu. Humne sath milke itna kuch kra, itna kuch jhela, itne roye, itne hase, itni sari baate ki, bohat kuch khoya, bohat kuch paya, still ek dusre ka sath nibhaya 🤭 ek dusre ko ek dusre ke liye change kra, yaar kitna kuch badal gaya na jaan 🫶🏻 piche mur ke dekho toh hazar baatein yaad aati hai — koi khushi ki, koi gum ki, koi hasi ki, koi rone ki 🫠 phir jaha hai waha dekhein toh shukar karne ka man karta hai khuda ka, ke itna sab jhelne ke baad bhi hum dono sath hai aur aaj bhi ek dusre ki duaon mein shamil hai 🫶🏻 ye jaan, shukar karne ka pal hai, ALLAH ka, ke usne itni musibaton ke baad bhi hume door nahi kiya 🫠 ALLAH ka shukar hai.</p>
 </footer>
-
+<audio id="bgMusic" src="song.mp3" loop preload="auto"></audio>
 <script>
   document.documentElement.classList.add('locked');
 
@@ -287,7 +287,10 @@
     if(val === 'zeenu'){
       lock.classList.add('hidden');
       document.documentElement.classList.remove('locked');
-    } else {
+      const music = document.getElementById('bgMusic');
+music.volume = 0.7;
+music.play().catch(e => console.log("Music error:", e));
+         } else {
       err.textContent = 'Galat password, phir se try karo 💗';
       lock.classList.add('shake');
       setTimeout(()=>lock.classList.remove('shake'),400);
